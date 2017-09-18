@@ -29,7 +29,7 @@ func main() {
 	}
 	stdOut, err := grantAccess(user, envsList, apisList)
 	if err != nil {
-		fmt.Printf("%v", stdOut)
+		fmt.Printf("%v", string(stdOut[:]))
 		log.Fatal(err)
 	}
 	fmt.Println("Done, grand master\n")
